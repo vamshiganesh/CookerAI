@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking Recipe Helper Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="chat-header">
+            <div class="bot-avatar">
+                <i class="fas fa-utensils"></i>
+            </div>
+            <div class="bot-info">
+                <h2>Chef Bot</h2>
+                <p class="status" id="status">Ready to help with recipes!</p>
+            </div>
+        </div>
+
+        <div class="chat-container" id="chatContainer">
+            <div class="message bot-message">
+                <div class="message-avatar">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="message-content">
+                    <p>Hello! I'm your cooking assistant. I can help you with:</p>
+                    <ul>
+                        <li>🍳 Recipe ideas and detailed cooking instructions</li>
+                        <li>🥗 Ingredient substitutions and modifications</li>
+                        <li>⏱️ Cooking techniques and tips</li>
+                        <li>🍽️ Meal planning suggestions</li>
+                    </ul>
+                    <p>What would you like to cook today?</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <button class="quick-btn" onclick="sendQuickMessage('Give me a quick pasta recipe')">
+                <i class="fas fa-clock"></i> Quick Pasta
+            </button>
+            <button class="quick-btn" onclick="sendQuickMessage('Suggest a healthy breakfast')">
+                <i class="fas fa-heart"></i> Healthy Breakfast
+            </button>
+            <button class="quick-btn" onclick="sendQuickMessage('Easy dinner for beginners')">
+                <i class="fas fa-star"></i> Easy Dinner
+            </button>
+        </div>
+
+        <div class="input-container">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="messageInput" 
+                    placeholder="Ask me about any recipe or cooking question..."
+                    maxlength="500"
+                >
+                <button id="sendButton" onclick="sendMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <button id="resetButton" onclick="resetConversation()">
+                <i class="fas fa-refresh"></i> New Conversation
+            </button>
+        </div>
+    </div>
+
+    <div id="loadingOverlay" class="loading-overlay">
+        <div class="loading-spinner">
+            <div class="spinner"></div>
+            <p>Chef Bot is thinking...</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
