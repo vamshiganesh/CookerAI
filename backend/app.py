@@ -11,7 +11,7 @@ CORS(app)  # Enable CORS for all domains
 
 # Ollama configuration
 OLLAMA_BASE_URL = os.getenv("OLLAMA_BASE_URL", "http://localhost:11434")
-OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma3:270m")
+OLLAMA_MODEL = os.getenv("OLLAMA_MODEL", "gemma3:1b")
 
 # Cooking system prompt
 COOKING_SYSTEM_PROMPT = """You are a helpful cooking assistant and recipe provider. You specialize in:

@@ -61,6 +61,7 @@ Next, install the required Python packages. A `requirements.txt` file is recomme
 pip freeze > requirements.txt
 
 # Install dependencies
+First direct into backend folder 
 pip install -r requirements.txt
 
 # Or install them manually
