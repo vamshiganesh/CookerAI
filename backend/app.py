@@ -49,8 +49,7 @@ class CookingChatbot:
                     "stream": False,
                     "options": {
                         "temperature": 0.7,
-                        "top_p": 0.9,
-                        "num_predict": 500  # Use num_predict for max tokens in Ollama
+                        "top_p": 0.9
                     }
                 },
                 timeout=120

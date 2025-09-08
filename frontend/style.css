@@ -28,7 +28,7 @@ body {
     display: flex;
     align-items: center;
     padding: 15px 20px;
-    background-color: #007bff;
+    background-color: #e97e0a ;
     color: white;
     border-bottom: 1px solid #ddd;
 }
@@ -76,7 +76,7 @@ body {
     flex-shrink: 0;
 }
 
-.bot-message .message-avatar { background-color: #007bff; color: white; }
+.bot-message .message-avatar { background-color: #e97e0a; color: white; }
 .user-message .message-avatar { background-color: #e9ecef; color: #495057; }
 
 .message-content {
@@ -89,10 +89,10 @@ body {
 .message-content ul { padding-left: 20px; margin-top: 5px; }
 
 .bot-message { align-self: flex-start; }
-.bot-message .message-content { background-color: #f1f3f5; border-top-left-radius: 0; }
+.bot-message .message-content { background-color: #dce1e6 ; border-top-left-radius: 0; }
 
 .user-message { align-self: flex-end; flex-direction: row-reverse; }
-.user-message .message-content { background-color: #007bff; color: white; border-top-right-radius: 0; }
+.user-message .message-content { background-color: #e97e0a; color: white; border-top-right-radius: 0; }
 
 .quick-actions {
     display: flex;
@@ -137,7 +137,7 @@ body {
 }
 
 #sendButton {
-    background-color: #007bff;
+    background-color: #e97e0a ;
     color: white;
     border: none;
     border-radius: 50%;
@@ -147,7 +147,7 @@ body {
     cursor: pointer;
     transition: background-color 0.2s;
 }
-#sendButton:hover { background-color: #0056b3; }
+#sendButton:hover { background-color: #ba6608; }
 #sendButton:disabled { background-color: #6c757d; cursor: not-allowed; }
 
 .footer {
@@ -180,5 +180,5 @@ body {
 }
 
 .loading-spinner { text-align: center; }
-.spinner { border: 4px solid rgba(0,0,0,.1); width: 36px; height: 36px; border-radius: 50%; border-left-color: #007bff; animation: spin 1s ease infinite; margin: 0 auto 10px; }
+.spinner { border: 4px solid rgba(0,0,0,.1); width: 36px; height: 36px; border-radius: 50%; border-left-color: #e97e0a ; animation: spin 1s ease infinite; margin: 0 auto 10px; }
 @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }

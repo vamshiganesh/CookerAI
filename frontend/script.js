@@ -96,7 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
         messageInput.value = message;
         sendMessage();
     };
-
     // --- UI Helper Functions ---
 
     function appendMessage(message, sender) {
@@ -109,8 +108,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const content = document.createElement('div');
         content.className = 'message-content';
+
         // A simple way to render newlines from the bot
-        content.innerHTML = `<p>${message.replace(/\n/g, '<br>')}</p>`;
+
+        if (sender === 'bot') {
+        // Convert Markdown to HTML for bot responses
+        var converter = new showdown.Converter();
+        content.innerHTML = converter.makeHtml(message);
+        } else {
+        // For user messages, just display plain text safely
+        content.textContent = message;
+        }
 
         messageWrapper.appendChild(avatar);
         messageWrapper.appendChild(content);
